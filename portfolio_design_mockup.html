@@ -1,0 +1,317 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
+
+  .pf * {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+  }
+
+  .pf {
+    background: #0f0f0f;
+    color: #f0f0f0;
+    border-radius: 12px;
+    overflow: hidden;
+  }
+
+  .pf-nav {
+    background: #0f0f0f;
+    border-bottom: 1px solid #222;
+    padding: 16px 40px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .pf-logo {
+    font-size: 18px;
+    font-weight: 700;
+    color: #a78bfa;
+  }
+
+  .pf-nav-links {
+    display: flex;
+    gap: 28px;
+  }
+
+  .pf-nav-links a {
+    color: #ccc;
+    font-size: 13px;
+    text-decoration: none;
+  }
+
+  .pf-hero {
+    padding: 80px 40px 70px;
+    border-bottom: 1px solid #1a1a1a;
+  }
+
+  .pf-tag {
+    display: inline-block;
+    background: #1e1a2e;
+    color: #a78bfa;
+    font-size: 11px;
+    padding: 4px 12px;
+    border-radius: 20px;
+    border: 1px solid #a78bfa44;
+    margin-bottom: 18px;
+  }
+
+  .pf-hero h1 {
+    font-size: 36px;
+    font-weight: 700;
+    line-height: 1.2;
+    margin-bottom: 8px;
+  }
+
+  .pf-hero h1 span {
+    color: #a78bfa;
+  }
+
+  .pf-hero p {
+    color: #888;
+    font-size: 14px;
+    margin-bottom: 28px;
+    max-width: 420px;
+    line-height: 1.7;
+  }
+
+  .pf-btns {
+    display: flex;
+    gap: 12px;
+  }
+
+  .btn-primary {
+    background: #a78bfa;
+    color: #0f0f0f;
+    padding: 10px 22px;
+    border-radius: 8px;
+    font-size: 13px;
+    font-weight: 600;
+    border: none;
+  }
+
+  .btn-secondary {
+    background: transparent;
+    color: #f0f0f0;
+    padding: 10px 22px;
+    border-radius: 8px;
+    font-size: 13px;
+    font-weight: 500;
+    border: 1px solid #333;
+  }
+
+  .pf-skills {
+    padding: 50px 40px;
+    border-bottom: 1px solid #1a1a1a;
+  }
+
+  .pf-section-label {
+    font-size: 11px;
+    color: #a78bfa;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    margin-bottom: 8px;
+  }
+
+  .pf-section-title {
+    font-size: 22px;
+    font-weight: 700;
+    margin-bottom: 28px;
+  }
+
+  .skill-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+  }
+
+  .skill-pill {
+    background: #1a1a1a;
+    border: 1px solid #2a2a2a;
+    color: #ccc;
+    padding: 7px 16px;
+    border-radius: 20px;
+    font-size: 12px;
+  }
+
+  .pf-projects {
+    padding: 50px 40px;
+    border-bottom: 1px solid #1a1a1a;
+  }
+
+  .project-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 16px;
+  }
+
+  .project-card {
+    background: #1a1a1a;
+    border: 1px solid #2a2a2a;
+    border-radius: 12px;
+    padding: 22px;
+    flex: 1 1 180px;
+  }
+
+  .project-card-tag {
+    font-size: 10px;
+    color: #a78bfa;
+    background: #1e1a2e;
+    padding: 3px 8px;
+    border-radius: 4px;
+    display: inline-block;
+    margin-bottom: 10px;
+  }
+
+  .project-card h3 {
+    font-size: 14px;
+    font-weight: 600;
+    margin-bottom: 6px;
+  }
+
+  .project-card p {
+    font-size: 12px;
+    color: #666;
+    line-height: 1.6;
+    margin-bottom: 14px;
+  }
+
+  .project-card-link {
+    font-size: 12px;
+    color: #a78bfa;
+    text-decoration: none;
+  }
+
+  .pf-contact {
+    padding: 50px 40px;
+    text-align: center;
+  }
+
+  .pf-contact h2 {
+    font-size: 22px;
+    font-weight: 700;
+    margin-bottom: 8px;
+  }
+
+  .pf-contact p {
+    font-size: 13px;
+    color: #666;
+    margin-bottom: 24px;
+  }
+
+  .pf-contact-links {
+    display: flex;
+    justify-content: center;
+    gap: 12px;
+  }
+
+  .contact-btn {
+    background: #1a1a1a;
+    border: 1px solid #2a2a2a;
+    color: #ccc;
+    padding: 9px 20px;
+    border-radius: 8px;
+    font-size: 12px;
+  }
+
+  .pf-footer {
+    background: #0a0a0a;
+    border-top: 1px solid #1a1a1a;
+    padding: 16px 40px;
+    text-align: center;
+  }
+
+  .pf-footer p {
+    font-size: 11px;
+    color: #444;
+  }
+</style>
+</head>
+<body>
+<div class="pf">
+
+  <nav class="pf-nav">
+    <div class="pf-logo">YourName.dev</div>
+    <div class="pf-nav-links">
+      <a href="#">About</a>
+      <a href="#">Skills</a>
+      <a href="#">Projects</a>
+      <a href="#">Contact</a>
+    </div>
+  </nav>
+
+  <section class="pf-hero">
+    <div class="pf-tag">BCA Student & Web Developer</div>
+    <h1>Hi, I'm <span>Your Name</span><br>I build for the web.</h1>
+    <p>Second year BCA student passionate about web development. I build clean, functional websites and keep learning
+      every day.</p>
+    <div class="pf-btns">
+      <button class="btn-primary">View Projects</button>
+      <button class="btn-secondary">Download CV</button>
+    </div>
+  </section>
+
+  <section class="pf-skills">
+    <div class="pf-section-label">What I know</div>
+    <div class="pf-section-title">Skills</div>
+    <div class="skill-grid">
+      <span class="skill-pill">HTML</span>
+      <span class="skill-pill">CSS</span>
+      <span class="skill-pill">JavaScript</span>
+      <span class="skill-pill">Python</span>
+      <span class="skill-pill">C++</span>
+      <span class="skill-pill">Flexbox</span>
+      <span class="skill-pill">Responsive Design</span>
+      <span class="skill-pill">Git & GitHub</span>
+    </div>
+  </section>
+
+  <section class="pf-projects">
+    <div class="pf-section-label">What I've built</div>
+    <div class="pf-section-title">Projects</div>
+    <div class="project-grid">
+      <div class="project-card">
+        <span class="project-card-tag">HTML / CSS / JS</span>
+        <h3>Weather App</h3>
+        <p>Search any city and get live weather data using a public API.</p>
+        <a class="project-card-link" href="#">View Project →</a>
+      </div>
+      <div class="project-card">
+        <span class="project-card-tag">HTML / CSS</span>
+        <h3>Portfolio Site</h3>
+        <p>This site — designed and built from scratch.</p>
+        <a class="project-card-link" href="#">View Project →</a>
+      </div>
+      <div class="project-card">
+        <span class="project-card-tag">Python</span>
+        <h3>Project Three</h3>
+        <p>A short description of what this project does.</p>
+        <a class="project-card-link" href="#">View Project →</a>
+      </div>
+    </div>
+  </section>
+
+  <section class="pf-contact">
+    <h2>Let's connect</h2>
+    <p>Open to internships, collaborations, and interesting conversations.</p>
+    <div class="pf-contact-links">
+      <button class="contact-btn">GitHub</button>
+      <button class="contact-btn">LinkedIn</button>
+      <button class="contact-btn">Email Me</button>
+    </div>
+  </section>
+
+  <footer class="pf-footer">
+    <p>Built by Your Name · 2025</p>
+  </footer>
+</div>
+</body>
+</html>
